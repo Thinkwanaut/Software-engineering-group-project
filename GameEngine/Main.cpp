@@ -1,12 +1,6 @@
-#include <iostream>
-#include <SDL.h>
-#include <SDL_ttf.h>
-#include <SDL_mixer.h>
-#include <SDL_image.h>
+#pragma once
 
-int main(int argc, char* args[])
+int main()
 {
-    std::cout << "Hello World!" << std::endl;
-
-    return 0;
+	return 0;
 }

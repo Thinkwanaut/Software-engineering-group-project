@@ -18,6 +18,9 @@
       <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Main.cpp" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
@@ -78,6 +81,8 @@
     <LinkIncremental>true</LinkIncremental>
     <IncludePath>$(SolutionDir)..\SDL2\include;$(SolutionDir)..\SDL2_ttf\include;$(SolutionDir)..\SDL2_mixer\include;$(SolutionDir)..\SDL2_image\include;$(IncludePath)</IncludePath>
     <LibraryPath>$(SolutionDir)..\SDL2\lib\x86;$(SolutionDir)..\SDL2_ttf\lib\x86;$(SolutionDir)..\SDL2_mixer\lib\x86;$(SolutionDir)..\SDL2_image\lib\x86;$(LibraryPath)</LibraryPath>
+    <OutDir>$(SolutionDir)$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(Platform)\$(Configuration)\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
@@ -258,9 +263,6 @@ copy /Y "$(SolutionDir)..\SDL2_image\lib\x64\libtiff-5.dll" "$(ProjectDir)"
 copy /Y "$(SolutionDir)..\SDL2_image\lib\x64\libwebp-7.dll" "$(ProjectDir)"</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
-  <ItemGroup>
-    <ClCompile Include="src\Main.cpp" />
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
